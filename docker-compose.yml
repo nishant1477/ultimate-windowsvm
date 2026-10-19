@@ -1,0 +1,36 @@
+# ══════════════════════════════════════════════════════════════════
+#  Ultimate WindowsVM — Docker Compose
+#  Copy .env.example to .env and adjust values, then:
+#    docker compose up -d --build
+# ══════════════════════════════════════════════════════════════════
+
+services:
+  windowsvm:
+    build: .
+    image: ultimate-windowsvm:latest
+    container_name: ultimate-windowsvm
+    restart: unless-stopped
+    stop_grace_period: 90s        # time for graceful ACPI shutdown of Windows
+    devices:
+      - /dev/kvm                  # remove this line on hosts WITHOUT KVM (slow TCG mode)
+    ports:
+      - "${NOVNC_PORT:-6080}:6080"   # noVNC web access
+      - "${RDP_PORT:-3389}:3389"     # Windows RDP
+    environment:
+      OS_VERSION: ${OS_VERSION:-win10}    # win10 | win11
+      MODE: ${MODE:-iso}                  # iso = fresh install | disk = pre-built qcow2
+      ACCESS: ${ACCESS:-both}             # novnc | rdp | both
+      CORES: ${CORES:-4}
+      RAM: ${RAM:-4G}
+      DISK: ${DISK:-64G}
+      ISO_URL: ${ISO_URL:-}
+      ENABLE_TPM: ${ENABLE_TPM:-auto}     # auto = TPM 2.0 on for Windows 11
+    volumes:
+      - windowsvm-data:/data             # VM disk (persists)
+      - windowsvm-iso:/iso               # downloaded ISO (persists)
+      # Pre-built disk mode — uncomment and point to your qcow2 (then set MODE=disk):
+      # - ./disk/windows11.qcow2:/data/disk.qcow2
+
+volumes:
+  windowsvm-data:
+  windowsvm-iso:
