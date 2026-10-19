@@ -125,7 +125,7 @@ Then it builds the image, starts the container, and prints your access links. â˜
 Prefer to run things yourself? No problem.
 
 ```bash
-git clone https://github.com/hopingboyz/ultimate-windowsvm.git
+git clone https://github.com/nishant1477/ultimate-windowsvm.git
 cd ultimate-windowsvm
 
 # Build the image
