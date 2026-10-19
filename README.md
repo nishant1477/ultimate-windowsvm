@@ -58,14 +58,14 @@ The combined evolution of *windows10vm* + *Windows11VM* — with an interactive 
 **One-liner** — open a terminal on any Linux host with Docker and paste:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hopingboyz/ultimate-windowsvm/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/nishant1477/ultimate-windowsvm/main/install.sh | bash
 ```
 
 That's it. The installer will ask you a few questions (or use flags to skip them):
 
 ```bash
 # Fully non-interactive example:
-curl -fsSL https://raw.githubusercontent.com/hopingboyz/ultimate-windowsvm/main/install.sh | bash -s -- \
+curl -fsSL https://raw.githubusercontent.com/nishant1477/ultimate-windowsvm/main/install.sh | bash -s -- \
   --os win11 --cores 4 --ram 8 --disk 80 --mode iso --access both --yes
 ```
 
@@ -369,7 +369,7 @@ internet without a VPN or authenticated tunnel.
 ## 📜 License
 
 Released under the [DragonLabs MIT+ License](LICENSE) — free to use, modify, and
-redistribute with attribution to **Hopingboyz**.
+redistribute with attribution to **Immortal**.
 
 <div align="center">
 
