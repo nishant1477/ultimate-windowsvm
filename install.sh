@@ -4,7 +4,7 @@
 #   Repo : https://github.com/hopingboyz/ultimate-windowsvm
 #
 #   One-liner:
-#     curl -fsSL https://raw.githubusercontent.com/hopingboyz/ultimate-windowsvm/main/install.sh | bash
+#     curl -fsSL https://raw.githubusercontent.com/nishant1477/ultimate-windowsvm/main/install.sh | bash
 #
 #   The installer asks:
 #     1) Which OS      → Windows 10 or Windows 11 (auto-suggested)
@@ -22,7 +22,7 @@
 set -euo pipefail
 
 VERSION="1.0.0"
-REPO="hopingboyz/ultimate-windowsvm"
+REPO="nishant1477/ultimate-windowsvm"
 IMAGE="ultimate-windowsvm:latest"
 CONTAINER="ultimate-windowsvm"
 SRC_DIR="${HOME}/.ultimate-windowsvm"
@@ -49,7 +49,7 @@ banner() {
   \___/ \___/|_|  |_/_/   \_\_| \_\_|  |_|___|_| \_| |_____|_|  |_|_____|____/
 EOF
   printf '%b\n' "$C_0  Windows 10 & 11 in Docker • noVNC + RDP • v${VERSION}"
-  printf '%b\n' "  https://github.com/hopingboyz/ultimate-windowsvm"
+  printf '%b\n' "  https://github.com/nishant1477/ultimate-windowsvm"
   echo ""
 }
 
