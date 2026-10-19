@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ══════════════════════════════════════════════════════════════════
 #   Ultimate WindowsVM — interactive installer
-#   Repo : https://github.com/hopingboyz/ultimate-windowsvm
+#   Repo : https://github.com/nishant1477/ultimate-windowsvm
 #
 #   One-liner:
 #     curl -fsSL https://raw.githubusercontent.com/nishant1477/ultimate-windowsvm/main/install.sh | bash
